@@ -1,0 +1,7 @@
+faiss-cpu
+joblib
+numpy
+sentence-transformers
+spacy
+tqdm
+tqdm-joblib
