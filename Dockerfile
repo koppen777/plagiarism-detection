@@ -11,6 +11,8 @@ COPY requirements.txt .
 
 RUN pip install --no-cache --break-system-packages --no-cache-dir -r requirements.txt
 
+ENV HF_HUB_OFFLINE=1
+
 COPY . .
 
 CMD ["python","run.py"]
