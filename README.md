@@ -34,6 +34,15 @@ docker build -t plagiarism-detection .
 docker run --rm -v $PWD:/workspace plagiarism-detection        python run.py --data_dir /workspace/data --output_dir /workspace/pred_xml
 ```
 
+## Submit to tira:
+
+Remove the `--dry-run` to submit:
+
+```bash
+tira-cli code-submission --mount-hf-model intfloat/e5-base-v2 --path . --task pan25-generated-plagiarism-detection --dataset llm-plagiarism-detection-spot-check-20250521-training --command 'python3 run.py --data_dir $inputDataset --output_dir $outputDir' --dry-run
+```
+
+
 ## Notes
 
 * `scripts/detection_pipeline.py` is a linear export of the notebook; each cell is separated by `# %%`.
