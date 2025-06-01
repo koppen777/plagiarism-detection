@@ -46,4 +46,5 @@ tira-cli code-submission --mount-hf-model intfloat/e5-base-v2 --path . --task pa
 ## Notes
 
 * `scripts/detection_pipeline.py` is a linear export of the notebook; each cell is separated by `# %%`.
-* Large embedding caches (e.g. `.npy`, `.npz`) are **not** included—upload them separately or mount them into the container.
+* This version computes embeddings on-the-fly without requiring precomputed embedding cache files.
+
